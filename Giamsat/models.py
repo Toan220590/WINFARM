@@ -47,8 +47,3 @@ class Thong_so(models.Model):
     Trafo_2_winding_temperature_max=models.FloatField(default=0)
     Trafo_3_winding_temperature=models.FloatField(default=0)
     Trafo_3_winding_temperature_max=models.FloatField(default=0)
-
-
-
-
-
