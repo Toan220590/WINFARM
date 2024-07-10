@@ -9,8 +9,11 @@ class Tru_gio(models.Model):
     cong_suat = models.FloatField(default = 0)
     lat = models.FloatField(default = 0)
     long = models.FloatField(default = 0)
+    def __str__(self):
+        return self.ten
 
 class Data(models.Model):
+    tru_gio = models.ForeignKey(Tru_gio, related_name='data', on_delete=models.CASCADE)
     Date = models.CharField(max_length=255, null=True, blank=True)
     Most_restrictive_WTG_Status_10M = models.FloatField(default=0)
     WTG_nacelle_position_corrected_Average_10M = models.FloatField(default=0)
