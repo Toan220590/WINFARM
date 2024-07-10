@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
-from.views import Tru_gioviewSet, Thong_soviewSet
+from.views import Tru_gioviewSet, DataviewSet
 
 from django.urls import re_path
 from rest_framework import permissions
@@ -23,7 +23,7 @@ schema_view = get_schema_view(
 
 router = routers.DefaultRouter()
 router.register('WG', Tru_gioviewSet)
-router.register('thongso', Thong_soviewSet)
+router.register('data', DataviewSet)
 
 
 

@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from .models import Tru_gio, Thong_so
-from .serializers import Tru_gioSerializer, Thong_soSerializer
+from .models import Tru_gio, Data
+from .serializers import Tru_gioSerializer, DataSerializer
 
 # Create your views here.
 class Tru_gioviewSet(viewsets.ModelViewSet):
     queryset = Tru_gio.objects.all()
     serializer_class = Tru_gioSerializer
 
-class Thong_soviewSet(viewsets.ModelViewSet):
-    queryset = Thong_so.objects.all()
-    serializer_class = Thong_soSerializer
+class DataviewSet(viewsets.ModelViewSet):
+    queryset = Data.objects.all()
+    serializer_class = DataSerializer
